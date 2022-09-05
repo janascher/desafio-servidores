@@ -1,10 +1,11 @@
 const express = require("express");
+//const database = require("./database ");
 const route = require("./routes/routes");
 const app = express();
-const PORT = 8000;
+const PORT = 8080;
 
 app.use(express.json()); // faz com que o express entenda JSON
-app.use(express.urlencoded({ extended: true })); //não tenho certeza se é true ou false
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/users", route);
 //app.use(express.static("."));
